@@ -11,7 +11,7 @@ use App\Http\Requests\RegistroRequest;
 class AuthController extends Controller
 {
     public function logout(Request $request ){
-        $user = $request -> user();
+        $user = $request ->user();
         $user->currentAccessToken()->delete();
 
         return [
